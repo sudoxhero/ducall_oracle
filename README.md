@@ -8,4 +8,5 @@ COMPONENTES:
 
 SESSOES GRAVADAS:
 - Instalação e configuração do VirtualBox com Oracle Linux 7.9
+
 https://www.youtube.com/watch?v=X_ShrLTNEuk
