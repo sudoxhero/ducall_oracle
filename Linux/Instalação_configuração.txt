@@ -84,3 +84,7 @@ systemctl disable firewalld
 
 - Colocar o SELinux para Permisive
 vi /etc/selinux/config
+
+- Forçar o uso do permissive 
+setenforce Permissive
+

@@ -16,6 +16,42 @@ useradd -u 54321 -g oinstall -G dba,oper oracle
 
 passwd oracle
 
+- Criar estrutura de pasta para o banco
+mkdir -p /u01/app/oracle/product/12.2/db
+chown -R oracle:oinstall /u01
+chmod -R 775 /u01
+
+!! fazer com o ducal
+
+- Configuração do bash_profile
+cd ~
+vi ~/.bash_profile
+
+# Oracle Settings
+export TMP=/tmp
+export TMPDIR=$TMP
+
+export ORACLE_HOSTNAME=ol7.localdomain
+export ORACLE_UNQNAME=cdb1
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/12.2/db
+export ORACLE_SID=cdb1
+
+export PATH=/usr/sbin:/usr/local/bin:$PATH
+export PATH=$ORACLE_HOME/bin:$PATH
+
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+
+- forçando o carregamento do bash_profile
+. .bash_profile
+
+#########################################
+## Transferir o instalador para a VM
+#########################################
+
+
+
 #########################################
 ## Instalação do banco de dados
 #########################################
