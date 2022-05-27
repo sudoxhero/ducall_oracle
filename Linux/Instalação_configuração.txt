@@ -1,0 +1,68 @@
+##########################
+## PRÉ REQUISITO
+##########################
+
+- Instalar o VirtualBox 
+https://www.oracle.com/br/virtualization/technologies/vm/downloads/virtualbox-downloads.html
+
+- Baixar o .iso do Linux 7.9 
+Baixar pelo Oracle eDelivery 
+
+- Instalar Mobaxterm 
+https://mobaxterm.mobatek.net/download-home-edition.html
+
+###############################
+## INSTALAÇÃO VIRTUAL BOX
+###############################
+
+- Instalar no NEXT > NEXT 
+
+##########################
+## CONFIGURAÇÃO VM 
+##########################
+
+- Criar VM configurando:
+-- 4GB Memoria 
+-- 50GB Disco fixo
+-- 2 CPU
+-- Habilitar rede host-only 
+-- Colocar .iso do Linux
+
+####################################################
+## INSTALAÇÃO E CONFIGURAÇÃO ORACLE LINUX
+####################################################
+
+- Tela inicial subir a seta e clicar para Instalar
+
+- 
+
+####################################################
+## INSTALAÇÃO E CONFIGURAÇÃO MOBAXTERM
+####################################################
+
+
+
+
+
+1 - Instalar o virtual box via oracle downloads !!!
+
+2 - Baixar a iso do Linux 7 no oracle edelivery
+
+3 - baixar oracle database 12.2 enterprise 
+
+4 - mobaxterm para conectar via ssh alem de fazer a instalacao com o display 
+
+########### virtual box 
+
+3 - Criar VM com 1 disco de 50GB fixo (20GB / | 1GB SWAP | resto no /u01 ) + 4GB de memoria 
+
+4 - network (placa 1 NAT / placa 2 host-only / placa 3 internal)
+
+########### linux 
+
+* - vi /etc/hosts 
+
+* - vi /etc/hostname 
+
+5 - yum update -y
+
