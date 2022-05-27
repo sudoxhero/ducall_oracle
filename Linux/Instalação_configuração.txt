@@ -29,40 +29,58 @@ https://mobaxterm.mobatek.net/download-home-edition.html
 -- Colocar .iso do Linux
 
 ####################################################
-## INSTALAÇÃO E CONFIGURAÇÃO ORACLE LINUX
+## INSTALAÇÃO INICIAL ORACLE LINUX
 ####################################################
 
 - Tela inicial subir a seta e clicar para Instalar
 
-- 
+- Configurar Data e Hora pra America\Sao_Paulo
+
+- Particionar o HD da seguinte forma:
+-- /boot com 1GB 
+-- / com 20GB ext4
+-- /swap com 1GB
+-- restante ficou para /u01 com ext4 , no caso sobrou 28GB
+
+- Ajustar o hostname colocando ol7.localdomain
+
+- Habilitar a placa e definir um IP (192.168.56.101/24)
+
+- Instalação minimo
+
+- #VAI! 
+
+- Colocar senha do usuario root no caso ficou ducal123!
 
 ####################################################
 ## INSTALAÇÃO E CONFIGURAÇÃO MOBAXTERM
 ####################################################
 
+- Instalar no NEXT > NEXT 
 
+- Criar nova conexão 
 
+####################################################
+## INSTALAÇÃO E CONFIGURAÇÃO MOBAXTERM
+####################################################
 
+- Instalar o pacote de network para ajudar a visualizar e gerenciar melhor as redes
+yum install net-tools -y
 
-1 - Instalar o virtual box via oracle downloads !!!
+- Gerenciar a placa com nmtui
 
-2 - Baixar a iso do Linux 7 no oracle edelivery
+- Executar o comando para atualizar OS
+yum update -y
 
-3 - baixar oracle database 12.2 enterprise 
+- Ajustar o hostname
+vi /etc/hostname
 
-4 - mobaxterm para conectar via ssh alem de fazer a instalacao com o display 
+- Ajustar o arquivo de host com o IP
+vi /etc/host 
 
-########### virtual box 
+- Desativar o firewalld
+systemctl stop firewalld
+systemctl disable firewalld
 
-3 - Criar VM com 1 disco de 50GB fixo (20GB / | 1GB SWAP | resto no /u01 ) + 4GB de memoria 
-
-4 - network (placa 1 NAT / placa 2 host-only / placa 3 internal)
-
-########### linux 
-
-* - vi /etc/hosts 
-
-* - vi /etc/hostname 
-
-5 - yum update -y
-
+- Colocar o SELinux para Permisive
+vi /etc/selinux/config
