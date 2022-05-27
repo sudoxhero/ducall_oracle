@@ -1,32 +1,11 @@
-banco Oracle
+Repositório com objetivo de realizar a instalação do Oracle Linux 7 com banco Oracle 12cR2 e com isso criando alguns scripts de monitoramento.
 
-instalacao de banco
-administração
-SO (linux) red
+COMPONENTES:
+- VirtualBox (4GB RAM e 50GB HD Fixo)
+- Oracle Linux 7.9
+- Oracle Database EE 12cR2 (Single Instance)
+- Grafana 
 
-banco / rac
-RMAN
-
-
-
-#########################
-
-Local sobre banco oracle 
-
-https://oracle-base.com/
-
-- Instalação (OL7 + DB12cR2)
-https://oracle-base.com/articles/linux/oracle-linux-7-installation
-https://oracle-base.com/articles/12c/oracle-db-12cr2-installation-on-oracle-linux-6-and-7
-
-- Instalação RAC (OL7 + DB12cR2)
-https://oracle-base.com/articles/linux/oracle-linux-7-installation
-https://oracle-base.com/articles/12c/oracle-db-12cr2-rac-installation-on-oracle-linux-7-using-virtualbox
-
-
-##########################
-
-
-
-
-
+SESSOES GRAVADAS:
+- Instalação e configuração do VirtualBox com Oracle Linux 7.9
+https://www.youtube.com/watch?v=X_ShrLTNEuk
